@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #050D1F;
+  --ink-soft: #0D1B38;
+  --ink-muted: #1A2D52;
+  --cream: #FFFCE8;
+  --cream-soft: #F5F2DC;
+  --yellow: #FFD60A;
+  --coral: #FF6B6B;
+  --mint: #06D6A0;
+  --lavender: #A78BFA;
+  --sky: #38BDF8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--ink);
+  color: var(--cream);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Clash Display', sans-serif;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--ink-soft); }
+::-webkit-scrollbar-thumb { background: var(--ink-muted); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--yellow); }
+
+/* react-big-calendar overrides */
+.rbc-calendar { background: transparent; font-family: 'DM Sans', sans-serif; color: var(--cream); }
+.rbc-header { background: var(--ink-soft); border-color: var(--ink-muted) !important; padding: 8px; font-family: 'Clash Display', sans-serif; font-size: 13px; color: var(--cream-soft); }
+.rbc-month-view, .rbc-time-view { border-color: var(--ink-muted) !important; }
+.rbc-day-bg { border-color: var(--ink-muted) !important; }
+.rbc-off-range-bg { background: var(--ink-soft); }
+.rbc-today { background: rgba(255,214,10,0.06) !important; }
+.rbc-event { background: var(--yellow); color: var(--ink); border: none; border-radius: 4px; font-size: 12px; font-weight: 600; }
+.rbc-event:focus { outline: none; }
+.rbc-slot-selection { background: rgba(255,214,10,0.2); }
+.rbc-time-slot { border-color: var(--ink-muted) !important; }
+.rbc-timeslot-group { border-color: var(--ink-muted) !important; }
+.rbc-time-content { border-color: var(--ink-muted) !important; }
+.rbc-time-gutter .rbc-label { color: var(--cream-soft); font-size: 11px; }
+.rbc-toolbar button { color: var(--cream); background: var(--ink-soft); border: 1px solid var(--ink-muted); border-radius: 6px; padding: 6px 12px; cursor: pointer; font-family: 'DM Sans', sans-serif; }
+.rbc-toolbar button:hover { background: var(--ink-muted); }
+.rbc-toolbar button.rbc-active { background: var(--yellow); color: var(--ink); border-color: var(--yellow); }
+.rbc-toolbar-label { font-family: 'Clash Display', sans-serif; font-size: 18px; }
+.rbc-show-more { color: var(--yellow); font-size: 11px; }
+.rbc-agenda-view table { color: var(--cream); }
+.rbc-agenda-date-cell, .rbc-agenda-time-cell { color: var(--cream-soft); }
